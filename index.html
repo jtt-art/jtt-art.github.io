@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let bigbang=new Date();
+    </script>
+    <style>
+        *{
+           /* border:6px solid burlywood;*/
+            font-size: 40px;
+            text-align: center;
+        }
+        header{
+            height:25%;
+            background-color: bisque;
+        }
+        main{
+            height: 65%;
+            background-color: azure;
+        }
+        footer{
+            height:10%;
+            background-color: aquamarine;
+
+        }
+       
+    </style>
+    <script>
+        console.log("加载CSS代码："+(new Date()-bigbang)+"ms!");
+    </script>
+    
+</head>
+<body>
+    <header>
+        Welcome to my website
+    </header>
+    <main>
+        333333 
+    </main>
+    <footer>
+        简婷婷
+    </footer>
+    <script>
+        document.body.style.height=innerHeight-18+'px'
+        console.log("渲染web页元素："+(new Date()-bigbang)+"ms!");
+        let timer=new Date();
+        for(let i=1;i<1e8;i++){
+
+        }
+        console.log("CPU从1数到1亿："+(new Date()-timer)+"ms!");
+    </script>
+        
+  
+ 
+</body>
+</html>
