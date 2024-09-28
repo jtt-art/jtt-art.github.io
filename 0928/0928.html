@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome to my page</title>
+    <style>
+        *{
+            border: 2px solid rgb(205, 212, 255);
+            margin:0;
+            padding:0;
+            text-align:center;
+            box-sizing:border-box;
+        }
+        p{
+            background-color: rgb(190, 236, 185);
+            border:1px solid rgb(221, 160, 219);
+        }
+        body{
+            height:99vh;
+            font-size:calc(0.5em+2vw);
+        }
+        header{
+            height:20%;
+            font-size:4.5em;
+            background-color: antiquewhite;
+        }
+        nav{
+            height:10%;
+            font-size:2em;
+            background-color: rgb(255, 223, 127);
+        }
+       
+        main{
+            height:60%;
+            font-size: 2em;
+            background-color: rgb(207, 193, 223);
+        }
+        footer{
+            height:10%;
+            background-color: rgb(157, 78, 78);
+            color:aliceblue;
+            font-size: 1.6em;
+        }
+        button{
+            padding:0.1em;
+            font-size:1em;
+        }
+        
+    </style>
+    <script>
+        let Model={};
+        Model.cet6String='';
+        Model.CET6=[];
+        Model.cetUrl=['CET/cet1.txt','CET/cet2.txt','CET/cet3.txt'];
+        for(let i=0;i<Model.cetUrl.length;i++){
+            fetch(Model.cetUrl[i])
+            .then(res=>res.text())
+            .then(txt=>{
+                Model.cet6String+=txt;
+                UI.log('单词库：'+Model.cetUrl[i]+'加载成功!');
+            });
+        };
+    </script>
+
+</head>
+<body>
+    <header>CET6第二个项目</header>
+    <nav>
+        <button id="loadWord">读入单词</button>
+        <button id="randWord">随机单词</button>
+    </nav>
+    <main>
+        <p id="word">abroad</p><br/>
+        <p id="pron">/ə'brɔ:d/</p><br/>
+        <p id="chinese">ad.到国外,在国外;在传播,在流传</p>
+    </main>
+    <footer>
+        江西科技师范大学简婷婷0928作业
+    </footer>
+    <script>
+        let UI={};
+            UI.log=function(s){
+                select('footer').textContent=s;
+            };
+            UI.headerLog=function(s){
+                select('header').textContent=s;
+            };
+            select('button#loadWord').onclick=function(){
+                Model.CET6=Model.cet6String.split('\r\n');
+                if(Model.CET6.length<5000){
+                    UI.log("单词没有完全读入，Please Wait!");
+                }else{
+                    UI.log("我已经读入了"+Model.CET6.length+"单词！")
+                }
+            };
+            select('button#randWord').onclick=function(){
+                if(Model.CET6.length<5000){
+                    UI.log("请点“读入单词”按钮");
+                }else{
+                    let rand=Math.floor(Math.random()*Model.CET6.length);
+                    UT.headerLog(Model.CET6[rand]);
+                    UI.log("我已经读入了"+Model.CET6.length+"单词！")
+                }
+            };      
+            function select(str){
+            let dom=document.querySelector(str);
+            return dom;
+        }
+    </script>
+
+    
+</body>
+</html>
