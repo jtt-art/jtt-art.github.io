@@ -1,0 +1,89 @@
+*{
+     /*border: 1px solid rgb(174, 233, 234);*/
+    margin:0;
+    padding:0;
+    text-align:center;
+    box-sizing:border-box;
+    }
+    p{
+        background-color: rgb(207, 193, 227);
+        border:1px solid rgb(221, 160, 219);
+    }
+    body{
+     height:99vh;
+     font-size:calc(0.5em+2vw);
+     position: relative;
+    }
+    header{
+     height:17%;
+     font-size:3.5em;
+     background-color: antiquewhite;
+    }
+    nav{
+     height:15%;
+     font-size:1.9em;
+     background-color: rgb(255, 223, 127);
+    }
+    
+    main{
+    height:58%;
+    font-size: 2em;
+    background-color: rgb(211, 204, 219);
+    }
+    main p#en{
+        font-size: 1.6em;
+        color:lightblue;
+        text-shadow: 2px 2px gray ;
+    }
+    main p#pn{
+        font-size: 1.2em;
+        color:lightseagreen;
+       }
+    footer{
+    height:10%;
+    background-color: rgb(157, 78, 78);
+    color:aliceblue;
+    font-size: 1.7em;
+    }
+    button{
+    padding:0.1em;
+    font-size:1.2em;
+    color:rgb(64, 68, 133)
+    }
+    form{
+     font-size:1.2em;
+     background-color: rgb(229, 237, 179);
+    position: absolute;
+    width:90%;
+    height: 80%;
+    left:5%;
+    top:10%;
+    border: 2px solid rgb(205, 212, 255);
+    }
+    form input{
+     font-size:1.2em;
+    }
+    span#level{
+     display: block;
+     position: absolute;
+     right:20px;
+     top:1px;
+     color:rgb(180, 180, 243);
+     font-size: 0.5em;
+    }
+    p.cn{
+     border:1px solid rgb(180, 180, 245) ;
+     background-color: antiquewhite;
+     cursor: pointer;
+    }
+    p.cn:hover{
+    color: rgb(62, 62, 222) ;
+    background-color: rgba(0, 0, 0, 0.144);
+    }
+    header span#response{
+     font-size: 0.8em;
+     color: red;
+     position: absolute;
+     right: 0.5em;
+    }
+    
