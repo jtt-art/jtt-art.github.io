@@ -15,18 +15,18 @@
      position: relative;
     }
     header{
-     height:17%;
+     height:15%;
      font-size:3.5em;
      background-color: antiquewhite;
     }
     nav{
-     height:15%;
+     height:10%;
      font-size:1.9em;
      background-color: rgb(255, 223, 127);
     }
     
     main{
-    height:58%;
+    height:60%;
     font-size: 2em;
     background-color: rgb(211, 204, 219);
     }
