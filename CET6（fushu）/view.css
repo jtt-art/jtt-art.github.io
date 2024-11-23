@@ -10,25 +10,41 @@
         border:1px solid rgb(221, 160, 219);
     }
     body{
-     height:99vh;
-     font-size:calc(0.5em+2vw);
-     position: relative;
+        font-size: calc(10px+1vh);
+        height: 98vh ;    
+        position: relative;
     }
     header{
-     height:15%;
-     font-size:3.5em;
-     background-color: antiquewhite;
+        font-size: 2em;
+        height: 15% ;
+        position: relative;
+       background-color: antiquewhite;
     }
-    nav{
-     height:10%;
-     font-size:1.9em;
-     background-color: rgb(255, 223, 127);
+    nav{ height: 8% ;
+        background-color: rgb(255, 223, 127);}
+    nav button{
+        font-size: 1.2em;
+        color:rgb(64, 68, 133)
+       }
+    button.small{
+        width: 30%;
+        padding: 0.1em 0.2em;  
     }
-    
+    button.big{
+        width: 45%;
+        padding: 0.1em 0.5em;  
+    }       
+    /* button{
+        padding:0.1em;
+        font-size:1.2em;
+        
+        }    */
     main{
-    height:60%;
-    font-size: 2em;
-    background-color: rgb(211, 204, 219);
+        margin-top: 1em;
+        font-size: 1.6em;
+        height: 60% ;
+        position: relative;
+        background-color: rgb(211, 204, 219);
     }
     main p#en{
         font-size: 1.6em;
@@ -45,23 +61,24 @@
     color:aliceblue;
     font-size: 1.7em;
     }
-    button{
-    padding:0.1em;
-    font-size:1em;
-    color:rgb(64, 68, 133)
-    }
+    
     form{
      font-size:1.2em;
      background-color: rgb(229, 237, 179);
     position: absolute;
     width:90%;
-    height: 80%;
+    height: 60%;
     left:5%;
     top:10%;
     border: 2px solid rgb(205, 212, 255);
     }
     form input{
      font-size:1.2em;
+     width:6em;
+    }
+    form button{
+     font-size: 1.3rem ;
+     margin-right: 1em;
     }
     span#level{
      display: block;
@@ -75,15 +92,18 @@
      border:1px solid rgb(180, 180, 245) ;
      background-color: antiquewhite;
      cursor: pointer;
+     font-size: 0.8em;
+     margin-bottom: 0.2em;
     }
     p.cn:hover{
     color: rgb(62, 62, 222) ;
     background-color: rgba(0, 0, 0, 0.144);
     }
-    header span#response{
+       header span#response{
      font-size: 0.8em;
      color: red;
      position: absolute;
      right: 0.5em;
+     top:2em;
     }
     
