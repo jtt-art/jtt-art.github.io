@@ -143,6 +143,13 @@
             hard ++ ;
          }
     }
+      for(let w of Model.learned){
+        let y= 2022 + Math.floor(2*Math.random())
+        let m= Math.floor(10*Math.random())
+        let d= Math.floor(28*Math.random())
+        let timer = new Date(y+'/'+m+'/'+d)
+         w.timer = timer;
+         }
     let s = Model.user + '状态: ' +easy +'熟悉/'+ normal +'一般/'+ hard+ '陌生'    ;
     select('p#title').textContent = s ;
     setTimeout(()=>{
